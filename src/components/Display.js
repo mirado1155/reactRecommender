@@ -1,11 +1,11 @@
 import React from "react"
-import DisplayItem from "./DisplayItem"
 
-function Display() {
+function Display(props) {
+    let itemNumber = 0;
+
     return (
-    
         <div id="result">
-            <DisplayItem />
+            <p>{props.items}</p>
         </div>
 
     )

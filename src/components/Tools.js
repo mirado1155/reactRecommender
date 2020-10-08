@@ -1,10 +1,27 @@
 import React from "react";
-import InputAdd from "./Tools/InputAdd.js";
-import InventoryWindow from "./Tools/InventoryWindow.js";
-import Remove from "./Tools/Remove.js";
+import InventoryItem from "./InventoryItem"
 
-function Tools() {
-    return <h1>I'm Tools, Displaying!</h1>
+function Tools(props) {
+
+    return (
+        <div>
+            
+            <form>
+                <button id="remove">Remove</button>
+
+                {props.items.map(item => (
+                    <div>
+                        <InventoryItem item={item}/>
+                    </div>
+                ) )}
+
+                <input type="text"></input><br />
+                <button type="submit">Add!</button>
+            </form>
+
+
+        </div>
+    )
 }
 
 export default Tools
