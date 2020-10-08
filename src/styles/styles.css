@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;
+}
+
+main {
+    height: 95%;
+}
+
+
+
+main div {
+    margin-top: 10px;
+}
+
+
+section {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+}

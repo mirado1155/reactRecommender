@@ -4,7 +4,6 @@ import Tools from './components/Tools';
 
 function App() {
     return <DisplayScreen />
-
 }
 
 export default App

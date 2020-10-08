@@ -1,20 +1,19 @@
 import React from "react"
-import DisplayItem from "./DisplayItem"
+import Display from "./Display"
+import Tools from "./Tools"
 
 function DisplayScreen() {
 
     return(
-        <main class="row">
+        <div class="row">
+            <section id="mainWindow" class="col-sm-7">
+                <Display />
+            </section>
 
-            <div id="mainWindow" class="col-sm-8">
-                <h1>Main Here</h1>
-            </div>
-
-            <div id="tools" class="col-sm-4">
-                <h2>Tools Here</h2>
-            </div>
-
-        </main>
+            <section id="tools" class="col-sm-4">
+                <Tools />
+            </section>
+        </div>
     )
     
 }
