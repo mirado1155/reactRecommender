@@ -1,25 +1,27 @@
-import React from "react";
-import Display from "./Display"
+import React, { useState } from "react";
 import InventoryItem from "./InventoryItem"
+import OutputWindow from "./OutputWindow"
+import Adder from "./Adder"
 
 function Tools(props) {
+
     return (
-        <section class="col-sm-4">
-            <form>
-                <button id="removeButton">Remove</button>
+        <div className="row full">
+            <OutputWindow items={props.items}/>
+            <section className="col-sm-4 window">
 
-                {props.items.map(item => (
-                    <div>
-                        <InventoryItem item={item}/>
-                    </div>
-                ) )}
+                    <button id="removeButton" onClick={() => props.handleRemove(props.items.name)}>Remove</button>
 
-                <input type="text"></input><br />
-                <button id="addButton" onClick={<Display selection/>}>
-                    Add!
-                </button>
-            </form>
-        </section>
+                    {props.items.map(item => (
+                        <div>
+                            <InventoryItem item={item}/>
+                        </div>
+                    ) )}
+
+                    <Adder handleAdd={props.handleAdd}/>
+
+            </section>
+        </div>
     )
 }
 

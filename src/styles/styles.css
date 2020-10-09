@@ -25,9 +25,13 @@ main div {
 
 
 section {
+    margin: auto;
+}
+
+.window {
     border: 2px solid black;
     border-radius: 5px;
-    margin: auto;
+    padding: 1.5em;
 }
 
 label {

@@ -1,25 +1,39 @@
-import React from "react"
+import React, {useState} from "react"
 import Tools from "./Tools"
-import InventoryItem from "./InventoryItem"
 
-function Display(props) {
+function Display() {
 
-    let selection
+    const[items, modifyItems] = useState
+    (
+        [
+            {id: 0, name:"testaurant"}, 
+            {id: 1, name:"secondaurant"}
+        ]
+    )
+    let itemsLength = items.length
+    const[count, setCount] = useState(itemsLength)
 
-    for (let i = 0; i < 15; i++) {
-        selection = props.items[Math.floor((Math.random() * props.items.length))];
+    console.log(count)
+
+    const handleAdd = item => {
+        modifyItems([...items, {id: 2, name: item}])
+        setCount(count + 1)
+        console.log(item)
+    }
+
+    function handleRemove(item) {
+        modifyItems(()=> {
+            let toDelete = items.indexOf({name:item})
+            items.splice(toDelete, 1)
+        })
     }
 
 
     return (
-        <div class="row full">
-            <section id="mainWindow" class="col-sm-7">
-                <h1>{selection}</h1>
-            </section>
-            <Tools items={props.items}/>
-        </div>
-
+        <Tools items={items} handleAdd={handleAdd} handleRemove={handleRemove}/>
     )
 }
 
 export default Display
+
+//
