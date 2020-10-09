@@ -1,13 +1,12 @@
 import React from "react";
+import Display from "./Display"
 import InventoryItem from "./InventoryItem"
 
 function Tools(props) {
-
     return (
-        <div>
-            
+        <section class="col-sm-4">
             <form>
-                <button id="remove">Remove</button>
+                <button id="removeButton">Remove</button>
 
                 {props.items.map(item => (
                     <div>
@@ -16,11 +15,11 @@ function Tools(props) {
                 ) )}
 
                 <input type="text"></input><br />
-                <button type="submit">Add!</button>
+                <button id="addButton" onClick={<Display selection/>}>
+                    Add!
+                </button>
             </form>
-
-
-        </div>
+        </section>
     )
 }
 
