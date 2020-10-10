@@ -11,7 +11,7 @@ function Outputter(props) {
 
     return(
         <div className="window">
-            <h2>Recommendation</h2><hr></hr>
+            <h2>Recommendation</h2>
             <div className="window">
                 <h1>{selection}</h1>
             </div>
