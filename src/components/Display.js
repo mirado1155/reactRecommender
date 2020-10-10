@@ -5,19 +5,20 @@ function Display() {
 
     const[items, modifyItems] = useState([])
     let itemsLength = items.length
-    const[count, setCount] = useState(itemsLength)
 
     const handleAdd = item => {
         modifyItems([...items, item])
-        setCount(count + 1)
     }
 
     const handleRemove = itemName => {
-        let newItems = items
+        let newItems = [...items]
+        console.log("before splice: " + newItems)
         newItems.splice(items.indexOf(itemName), 1)
-        console.log(newItems)
         modifyItems(newItems)
+        console.log("after modify items: " + newItems)
     }
+
+    console.log("after handleRemove " + items)
 
     return (
         <Tools items={items} handleAdd={handleAdd} handleRemove={handleRemove}/>
