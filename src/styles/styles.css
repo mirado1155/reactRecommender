@@ -47,3 +47,9 @@ header {
 #itemList {
     text-align: left;
 }
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
