@@ -4,7 +4,6 @@ import Tools from "./Tools"
 function Display() {
 
     const[items, modifyItems] = useState([])
-    let itemsLength = items.length
 
     const handleAdd = item => {
         modifyItems([...items, item])
