@@ -5,7 +5,7 @@ function Adder(props) {
     return(
         <div>
             <input onChange={event => setValue(event.target.value)} type="text"></input><br />
-            <button id="addButton" onClick={() => props.handleAdd(value)}>
+            <button className="btn btn-primary" id="addButton" onClick={() => props.handleAdd(value)}>
                 Add!
             </button>
         </div>

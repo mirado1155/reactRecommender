@@ -2,13 +2,21 @@ import React, {useState} from "react"
 
 function Outputter(props) {
 
-    const[isPushed, setPushed] = useState(false)
+    const[selection, setSelection] = useState("")
 
-    
+    const handlePushed = selection => {
+        setSelection(props.items[Math.floor(Math.random() * props.items.length)])
+        console.log(selection)
+    }
 
     return(
         <div className="window">
-                <h1>{props.isPushed ? props.selection : ""}</h1>
+            <h2>Recommendation</h2><hr></hr>
+            <div className="window">
+                <h1>{selection}</h1>
+            </div>
+            {props.items.length > 0 ? <button className="btn btn-success" onClick={() => handlePushed()}>Recommend!</button> : <button className="btn btn-danger">Add an item to the list!</button>}
+            
         </div>
     )
 }

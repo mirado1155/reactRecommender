@@ -32,8 +32,18 @@ section {
     border: 2px solid black;
     border-radius: 5px;
     padding: 1.5em;
+    text-align: center;
 }
 
 label {
     margin-left: 10px;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+#itemList {
+    text-align: left;
 }
