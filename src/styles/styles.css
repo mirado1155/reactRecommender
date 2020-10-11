@@ -9,6 +9,7 @@ body {
 .full {
     width: 100%;
     height: 100%;
+    margin: auto;
 }
 
 main {
@@ -29,10 +30,23 @@ section {
 }
 
 .window {
-    border: 2px solid black;
-    border-radius: 5px;
+    /* border: .5px solid #00eeff62; */
+    
     padding: 1.5em;
     text-align: center;
+    background-color: #00eeff62;
+}
+
+.window-bottom {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.window-top {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.displayWindow {
+    background-color: white;
 }
 
 label {
@@ -65,4 +79,8 @@ li:hover {
     background-color: #007bffe3;
     color: white;
 
+}
+
+#outputSection {
+    padding: 0;
 }

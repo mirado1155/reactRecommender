@@ -10,9 +10,9 @@ function Outputter(props) {
     }
 
     return(
-        <div className="window">
+        <div className="window window-top">
             <h2>Recommendation</h2>
-            <div className="window">
+            <div className="window displayWindow">
                 <h1>{selection}</h1>
             </div>
             {props.items.length > 0 ? <button className="btn btn-success" onClick={() => handlePushed()}>Recommend!</button> : <button className="btn btn-danger">Add an item to the list!</button>}
