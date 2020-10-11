@@ -29,6 +29,14 @@ section {
     margin: auto;
 }
 
+.window {
+    /* border: .5px solid #00eeff62; */
+    
+    padding: 1.5em;
+    text-align: center;
+    background-color: #00eeff62;
+}
+
 
 .displayWindow {
     background-color: white;
@@ -70,15 +78,9 @@ li:hover {
     padding: 0;
 }
 
-.window {
-    /* border: .5px solid #00eeff62; */
-    
-    padding: 1.5em;
-    text-align: center;
-    background-color: #00eeff62;
-}
+
 @media only screen and (max-width: 770px) {
-        .window-bottom {
+    .window-bottom {
         border-radius: 0px 0px 5px 5px;
     }
 
