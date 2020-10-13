@@ -6,7 +6,9 @@ function Display() {
     const[items, modifyItems] = useState([])
 
     const handleAdd = item => {
-        modifyItems([...items, item])
+        if(item.trim()) {
+            modifyItems([...items, item])
+        }
     }
 
     const handleRemove = itemName => {
